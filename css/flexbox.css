@@ -1,0 +1,120 @@
+.headerPrincipal .container{    /** Se necesita etiqueta padre y con los elementos internos (container) **/
+    display: flex;              /** Se alinean los componentes uno al lado del otro **/
+    align-items: center;        /** Se alinean los componentes al centro respecto al vertical **/
+    justify-content: space-between; /** Separa los componentes con un espacio automatico entre ellos **/
+}
+
+.headerPrincipal-nav{ /** No se necesita especificar las demas alineaciones ya que son heredadas del padre **/
+    display: flex;
+}
+
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  /** Centra el contenido del container de acuerdo al espacio alrededor **/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-direction: column; /** Alinea en forma vertical **/
+    height: 290px;
+    flex-wrap: wrap;    /** Separa los componentes cada que se cumple el alto especificado **/
+}
+
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link{
+    display: flex;
+    width: 23%;
+}
+
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-video{
+    flex-grow: 2;   /** Aumenta por 2 el tamaño del video en cuando de incremente la pantalla **/
+    flex-shrink: 2; /** Reduce por 2 el tamaño del video en cuando de disminuye la pantalla **/
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+
+
+.videoSobre-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ? Parte RESPONSIVA */
+@media (max-width:768px){
+    .headerPrincipal .container{
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav{
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos{
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link{
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list{
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-patrocinadores-list{
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .rodapePrincipal-contatoForm{
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset{
+        justify-content: center;
+    }
+
+    .headerPrincipal-nav-link-app{
+        order: -1;
+    }
+
+    .videoSobre .container{
+        flex-direction: column;
+    }
+}
